@@ -42,22 +42,9 @@
 		8B0FE3D52D8883D00081B25E /* Ble_ConnectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ble_ConnectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		8B5CF4792D88DD4F00D59BA5 /* Exceptions for "Ble_Connector" folder in "Ble_Connector" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Ble-Connector-Info.plist",
-			);
-			target = 8B0FE3BA2D8883CE0081B25E /* Ble_Connector */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8B0FE3BD2D8883CE0081B25E /* Ble_Connector */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				8B5CF4792D88DD4F00D59BA5 /* Exceptions for "Ble_Connector" folder in "Ble_Connector" target */,
-			);
 			path = Ble_Connector;
 			sourceTree = "<group>";
 		};

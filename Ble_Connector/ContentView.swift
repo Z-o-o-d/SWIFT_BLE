@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreBluetooth
+import UserNotifications
 
 // 蓝牙管理器
 class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate, CBPeripheralDelegate {
@@ -8,10 +9,20 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate, CB
     @Published var connectedPeripheral: CBPeripheral?
     @Published var isFiltering: Bool = true
     @Published var isConnected: Bool = false
+    @Published var receivedDataList: [String] = []
+    @Published var connectionStatus: String = "Disconnected"
+    private var reconnectTimer: Timer?
+    private var connectionCheckTimer: Timer?
 
     override init() {
         super.init()
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        // 请求通知权限
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if let error = error {
+                print("Error requesting notification authorization: \(error.localizedDescription)")
+            }
+        }
     }
 
     // 开始扫描设备
@@ -26,12 +37,55 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate, CB
 
     // 连接设备
     func connect(to peripheral: CBPeripheral) {
+        if let currentConnected = connectedPeripheral, currentConnected != peripheral {
+            disconnect(peripheral: currentConnected)
+        }
         centralManager.connect(peripheral, options: nil)
     }
 
     // 断开连接
     func disconnect(peripheral: CBPeripheral) {
         centralManager.cancelPeripheralConnection(peripheral)
+        connectedPeripheral = nil
+        isConnected = false
+        connectionStatus = "Disconnected"
+        startScanning()
+        startReconnectTimer(for: peripheral)
+    }
+
+    // 开始重连定时器
+    private func startReconnectTimer(for peripheral: CBPeripheral) {
+        reconnectTimer?.invalidate()
+        reconnectTimer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            if self.connectedPeripheral == nil {
+                self.centralManager.connect(peripheral, options: nil)
+                self.connectionStatus = "Reconnecting..."
+            } else {
+                self.reconnectTimer?.invalidate()
+            }
+        }
+    }
+
+    // 停止重连定时器
+    private func stopReconnectTimer() {
+        reconnectTimer?.invalidate()
+    }
+
+    // 开始连接检查定时器
+    func startConnectionCheck() {
+        connectionCheckTimer?.invalidate()
+        connectionCheckTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            if self.connectedPeripheral != nil && !self.isConnected {
+                self.startReconnectTimer(for: self.connectedPeripheral!)
+            }
+        }
+    }
+
+    // 停止连接检查定时器
+    func stopConnectionCheck() {
+        connectionCheckTimer?.invalidate()
     }
 
     // 中心管理器状态更新
@@ -62,19 +116,24 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate, CB
         connectedPeripheral = peripheral
         peripheral.delegate = self
         isConnected = true
+        connectionStatus = "Connected"
+        stopReconnectTimer()
         peripheral.discoverServices([CBUUID(string: "fff0")])
     }
 
     // 连接失败
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         print("Failed to connect: \(error?.localizedDescription ?? "Unknown error")")
+        connectionStatus = "Connection failed"
     }
 
-    // 断开连接
+    // 断开连接回调
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         connectedPeripheral = nil
         isConnected = false
+        connectionStatus = "Disconnected"
         startScanning()
+        startReconnectTimer(for: peripheral)
     }
 
     // 发现服务
@@ -116,6 +175,19 @@ class BluetoothManager: NSObject, ObservableObject, CBCentralManagerDelegate, CB
 
         if let data = characteristic.value, let string = String(data: data, encoding: .utf8) {
             print("Received data: \(string)")
+            // 发送本地通知
+            let content = UNMutableNotificationContent()
+            content.title = "BLE Data Received"
+            content.body = string
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request) { error in
+                if let error = error {
+                    print("Error sending notification: \(error.localizedDescription)")
+                }
+            }
+            // 更新接收到的数据列表
+            receivedDataList.append(string)
         }
     }
 }
@@ -126,12 +198,22 @@ struct ConnectedView: View {
 
     var body: some View {
         VStack {
-            Text("Connected to \(bluetoothManager.connectedPeripheral?.name ?? "Unknown Device")")
-            Button("Disconnect") {
-                if let peripheral = bluetoothManager.connectedPeripheral {
-                    bluetoothManager.disconnect(peripheral: peripheral)
+            Text("Connection Status: \(bluetoothManager.connectionStatus)")
+            if let connectedPeripheral = bluetoothManager.connectedPeripheral {
+                Text("Connected to \(connectedPeripheral.name ?? "Unknown Device")")
+            }
+            // 显示接收到的数据列表
+            Section(header: Text("Received Data")) {
+                List(bluetoothManager.receivedDataList, id: \.self) { data in
+                    Text(data)
                 }
             }
+        }
+        .onAppear {
+            bluetoothManager.startConnectionCheck()
+        }
+        .onDisappear {
+            bluetoothManager.stopConnectionCheck()
         }
     }
 }
@@ -145,7 +227,7 @@ struct ContentView: View {
             Form {
                 Section(header: Text("Filter Settings")) {
                     Toggle("Filter devices containing 'ZeBLE'", isOn: $bluetoothManager.isFiltering)
-                        .onChange(of: bluetoothManager.isFiltering) { _ in
+                       .onChange(of: bluetoothManager.isFiltering) { _ in
                             bluetoothManager.peripherals.removeAll()
                             bluetoothManager.startScanning()
                         }
@@ -153,12 +235,14 @@ struct ContentView: View {
 
                 if let connectedPeripheral = bluetoothManager.connectedPeripheral {
                     Section(header: Text("Connected Device")) {
-                        NavigationLink(destination: ConnectedView(bluetoothManager: bluetoothManager), isActive: $bluetoothManager.isConnected) {
+                        NavigationLink(destination: ConnectedView(bluetoothManager: bluetoothManager)) {
                             Text(connectedPeripheral.name ?? "Unknown Device")
-                                .foregroundColor(.green)
-                        }
-                        Button("Disconnect") {
-                            bluetoothManager.disconnect(peripheral: connectedPeripheral)
+                               .foregroundColor(.green)
+                               .swipeActions(edge: .trailing) {
+                                    Button("Disconnect", role: .destructive) {
+                                        bluetoothManager.disconnect(peripheral: connectedPeripheral)
+                                    }
+                                }
                         }
                     }
                 }
@@ -173,7 +257,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle("Bluetooth Devices")
+           .navigationTitle("Bluetooth Devices")
         }
     }
 }
