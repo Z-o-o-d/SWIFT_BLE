@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		8B0FE3CC2D8883D00081B25E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B0FE3B32D8883CE0081B25E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B0FE3BA2D8883CE0081B25E;
+			remoteInfo = Ble_Connector;
+		};
+		8B0FE3D62D8883D00081B25E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B0FE3B32D8883CE0081B25E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B0FE3BA2D8883CE0081B25E;
+			remoteInfo = Ble_Connector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B0FE3EE2D8886080081B25E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8B0FE3BB2D8883CE0081B25E /* Ble_Connector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ble_Connector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0FE3CB2D8883D00081B25E /* Ble_ConnectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ble_ConnectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0FE3D52D8883D00081B25E /* Ble_ConnectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ble_ConnectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8B5CF4792D88DD4F00D59BA5 /* Exceptions for "Ble_Connector" folder in "Ble_Connector" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Ble-Connector-Info.plist",
+			);
+			target = 8B0FE3BA2D8883CE0081B25E /* Ble_Connector */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8B0FE3BD2D8883CE0081B25E /* Ble_Connector */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8B5CF4792D88DD4F00D59BA5 /* Exceptions for "Ble_Connector" folder in "Ble_Connector" target */,
+			);
+			path = Ble_Connector;
+			sourceTree = "<group>";
+		};
+		8B0FE3CE2D8883D00081B25E /* Ble_ConnectorTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Ble_ConnectorTests;
+			sourceTree = "<group>";
+		};
+		8B0FE3D82D8883D00081B25E /* Ble_ConnectorUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Ble_ConnectorUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B0FE3B82D8883CE0081B25E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0FE3C82D8883D00081B25E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0FE3D22D8883D00081B25E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B0FE3B22D8883CE0081B25E = {
+			isa = PBXGroup;
+			children = (
+				8B0FE3BD2D8883CE0081B25E /* Ble_Connector */,
+				8B0FE3CE2D8883D00081B25E /* Ble_ConnectorTests */,
+				8B0FE3D82D8883D00081B25E /* Ble_ConnectorUITests */,
+				8B0FE3BC2D8883CE0081B25E /* Products */,
+				8B5CF4722D88C8D200D59BA5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8B0FE3BC2D8883CE0081B25E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B0FE3BB2D8883CE0081B25E /* Ble_Connector.app */,
+				8B0FE3CB2D8883D00081B25E /* Ble_ConnectorTests.xctest */,
+				8B0FE3D52D8883D00081B25E /* Ble_ConnectorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B5CF4722D88C8D200D59BA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B0FE3BA2D8883CE0081B25E /* Ble_Connector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0FE3DF2D8883D00081B25E /* Build configuration list for PBXNativeTarget "Ble_Connector" */;
+			buildPhases = (
+				8B0FE3B72D8883CE0081B25E /* Sources */,
+				8B0FE3B82D8883CE0081B25E /* Frameworks */,
+				8B0FE3B92D8883CE0081B25E /* Resources */,
+				8B0FE3EE2D8886080081B25E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8B0FE3BD2D8883CE0081B25E /* Ble_Connector */,
+			);
+			name = Ble_Connector;
+			packageProductDependencies = (
+			);
+			productName = Ble_Connector;
+			productReference = 8B0FE3BB2D8883CE0081B25E /* Ble_Connector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B0FE3CA2D8883D00081B25E /* Ble_ConnectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0FE3E22D8883D00081B25E /* Build configuration list for PBXNativeTarget "Ble_ConnectorTests" */;
+			buildPhases = (
+				8B0FE3C72D8883D00081B25E /* Sources */,
+				8B0FE3C82D8883D00081B25E /* Frameworks */,
+				8B0FE3C92D8883D00081B25E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B0FE3CD2D8883D00081B25E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8B0FE3CE2D8883D00081B25E /* Ble_ConnectorTests */,
+			);
+			name = Ble_ConnectorTests;
+			packageProductDependencies = (
+			);
+			productName = Ble_ConnectorTests;
+			productReference = 8B0FE3CB2D8883D00081B25E /* Ble_ConnectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B0FE3D42D8883D00081B25E /* Ble_ConnectorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0FE3E52D8883D00081B25E /* Build configuration list for PBXNativeTarget "Ble_ConnectorUITests" */;
+			buildPhases = (
+				8B0FE3D12D8883D00081B25E /* Sources */,
+				8B0FE3D22D8883D00081B25E /* Frameworks */,
+				8B0FE3D32D8883D00081B25E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B0FE3D72D8883D00081B25E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8B0FE3D82D8883D00081B25E /* Ble_ConnectorUITests */,
+			);
+			name = Ble_ConnectorUITests;
+			packageProductDependencies = (
+			);
+			productName = Ble_ConnectorUITests;
+			productReference = 8B0FE3D52D8883D00081B25E /* Ble_ConnectorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B0FE3B32D8883CE0081B25E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					8B0FE3BA2D8883CE0081B25E = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					8B0FE3CA2D8883D00081B25E = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 8B0FE3BA2D8883CE0081B25E;
+					};
+					8B0FE3D42D8883D00081B25E = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 8B0FE3BA2D8883CE0081B25E;
+					};
+				};
+			};
+			buildConfigurationList = 8B0FE3B62D8883CE0081B25E /* Build configuration list for PBXProject "Ble_Connector" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B0FE3B22D8883CE0081B25E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8B0FE3BC2D8883CE0081B25E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B0FE3BA2D8883CE0081B25E /* Ble_Connector */,
+				8B0FE3CA2D8883D00081B25E /* Ble_ConnectorTests */,
+				8B0FE3D42D8883D00081B25E /* Ble_ConnectorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B0FE3B92D8883CE0081B25E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0FE3C92D8883D00081B25E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0FE3D32D8883D00081B25E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B0FE3B72D8883CE0081B25E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0FE3C72D8883D00081B25E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0FE3D12D8883D00081B25E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B0FE3CD2D8883D00081B25E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B0FE3BA2D8883CE0081B25E /* Ble_Connector */;
+			targetProxy = 8B0FE3CC2D8883D00081B25E /* PBXContainerItemProxy */;
+		};
+		8B0FE3D72D8883D00081B25E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B0FE3BA2D8883CE0081B25E /* Ble_Connector */;
+			targetProxy = 8B0FE3D62D8883D00081B25E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8B0FE3DD2D8883D00081B25E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B0FE3DE2D8883D00081B25E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B0FE3E02D8883D00081B25E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ble_Connector/Preview Content\"";
+				DEVELOPMENT_TEAM = 34LJ73452N;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ble-Connector-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "此应用使用蓝牙来连接和控制外部设备";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zeee.Ble-Connector";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B0FE3E12D8883D00081B25E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ble_Connector/Preview Content\"";
+				DEVELOPMENT_TEAM = 34LJ73452N;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Ble-Connector-Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "此应用使用蓝牙来连接和控制外部设备";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zeee.Ble-Connector";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B0FE3E32D8883D00081B25E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34LJ73452N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zeee.Ble-ConnectorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ble_Connector.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ble_Connector";
+			};
+			name = Debug;
+		};
+		8B0FE3E42D8883D00081B25E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34LJ73452N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zeee.Ble-ConnectorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ble_Connector.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ble_Connector";
+			};
+			name = Release;
+		};
+		8B0FE3E62D8883D00081B25E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34LJ73452N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zeee.Ble-ConnectorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ble_Connector;
+			};
+			name = Debug;
+		};
+		8B0FE3E72D8883D00081B25E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 34LJ73452N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zeee.Ble-ConnectorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ble_Connector;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B0FE3B62D8883CE0081B25E /* Build configuration list for PBXProject "Ble_Connector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0FE3DD2D8883D00081B25E /* Debug */,
+				8B0FE3DE2D8883D00081B25E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0FE3DF2D8883D00081B25E /* Build configuration list for PBXNativeTarget "Ble_Connector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0FE3E02D8883D00081B25E /* Debug */,
+				8B0FE3E12D8883D00081B25E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0FE3E22D8883D00081B25E /* Build configuration list for PBXNativeTarget "Ble_ConnectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0FE3E32D8883D00081B25E /* Debug */,
+				8B0FE3E42D8883D00081B25E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0FE3E52D8883D00081B25E /* Build configuration list for PBXNativeTarget "Ble_ConnectorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0FE3E62D8883D00081B25E /* Debug */,
+				8B0FE3E72D8883D00081B25E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B0FE3B32D8883CE0081B25E /* Project object */;
+}
